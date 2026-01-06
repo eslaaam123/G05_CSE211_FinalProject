@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- === HEAD SECTION === -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration - EventX</title>
+    <link rel="stylesheet" href="css/global.css" />
+  </head>
+  <!-- === END HEAD === -->
+  <body>
+    <!-- === HEADER SECTION === -->
+    <header>
+      <h1>EventsX</h1>
+      <p>Your Personal Event Planner in Egypt</p>
+    </header>
+    <!-- === END HEADER === -->
+
+    <!-- === NAVIGATION SECTION === -->
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="registration.html">Register</a></li>
+        <li><a href="budget-calculator.html">Budget Calculator</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+    <!-- === END NAVIGATION === -->
+
+    <!-- === BREADCRUMB SECTION === -->
+    <div class="breadcrumb">
+      <a href="../index.html">Home</a> &gt;
+      <a href="registration.html">Registration</a>
+    </div>
+    <!-- === END BREADCRUMB === -->
+
+    <!-- === MAIN CONTENT SECTION === -->
+    <main>
+      <h2>Event Registration</h2>
+      <form id="registration-form">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required placeholder="01XXXXXXXXX" />
+
+        <label for="event">Select Event:</label>
+        <select id="event" name="event" required>
+          <option value="">-- Select an event --</option>
+          
+        </select>
+
+
+        <label for="tickets">Number of Tickets:</label>
+        <input
+          type="number"
+          id="tickets"
+          name="tickets"
+          min="1"
+          value="1"
+          required
+        />
+
+        <label for="notes">Special Requirements:</label>
+        <textarea id="notes" name="notes" rows="4"></textarea>
+
+        <button type="submit">Register Now</button>
+      </form>
+    </main>
+    <!-- === END MAIN CONTENT === -->
+
+    <!-- === FOOTER SECTION === -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+        <div class="footer-contact">
+          <a href="mailto:EventX@gmail.com">Email</a>
+        </div>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://twitter.com/" target="_blank" rel="noopener">Twitter</a>
+        </div>
+      </div>
+      <p>&copy; 2026 EventsX - All Rights Reserved</p>
+    </footer>
+    <!-- === END FOOTER === -->
+    <!-- === SCRIPTS SECTION === -->
+    <script src="Scripts/form-validation.js"></script>
+    <script src="Scripts/app.js"></script>
+    <!-- === END SCRIPTS === -->
+  </body>
+</html>
