@@ -1,0 +1,222 @@
+==================================================
+        EventsX - System Requirements
+==================================================
+
+Project: EventsX Event Management Website
+Course: CSE211 Web Programming
+Date: January 2026
+
+==================================================
+            SOFTWARE REQUIREMENTS
+==================================================
+
+Server Environment:
+  - XAMPP 8.0 or higher (or similar)
+  - Apache Web Server
+  - MySQL 5.7 or higher
+  - PHP 7.4 or higher
+
+Web Browsers:
+  - Google Chrome (recommended)
+  - Mozilla Firefox
+  - Microsoft Edge
+  - Safari
+
+Text Editor (for development):
+  - Visual Studio Code
+  - Sublime Text
+  - Notepad++
+  - Any code editor
+
+==================================================
+          PROGRAMMING LANGUAGES
+==================================================
+
+Frontend:
+  - HTML5
+  - CSS3
+  - JavaScript ES6+
+
+Backend:
+  - PHP 7.4+
+  - SQL (MySQL)
+
+==================================================
+         LIBRARIES & FRAMEWORKS
+==================================================
+
+CSS:
+  - Custom CSS (no frameworks used)
+  - Responsive design with media queries
+
+JavaScript:
+  - Vanilla JavaScript (no frameworks)
+  - ES6 Classes
+  - Fetch API for HTTP requests
+  - LocalStorage for session management
+
+PHP:
+  - mysqli extension for database
+  - JSON functions for API responses
+  - password_hash for security
+
+==================================================
+            DATABASE REQUIREMENTS
+==================================================
+
+Database System:
+  - MySQL 5.7 or higher
+
+Tables Required:
+  - users
+  - events
+  - registrations
+
+Storage:
+  - Minimum 50MB for database
+  - Additional space for images
+
+==================================================
+               SERVER SETUP
+==================================================
+
+Required Services:
+  ✓ Apache Web Server (running)
+  ✓ MySQL Database (running)
+  ✓ PHP Module (enabled)
+
+PHP Extensions Needed:
+  ✓ mysqli
+  ✓ json
+  ✓ session
+
+Apache Modules:
+  ✓ mod_rewrite (optional)
+
+==================================================
+          DEVELOPMENT TOOLS USED
+==================================================
+
+Code Editor:
+  - Visual Studio Code
+
+Database Management:
+  - phpMyAdmin (comes with XAMPP)
+
+Browser DevTools:
+  - Chrome DevTools (for debugging)
+  - Console for JavaScript errors
+  - Network tab for API testing
+
+Version Control:
+  - Git (optional, not required)
+
+==================================================
+         EXTERNAL RESOURCES USED
+==================================================
+
+Fonts:
+  - Source Sans Pro (Google Fonts)
+  - Roboto Slab (Google Fonts)
+
+Icons:
+  - Text-based emoji icons
+  - No icon libraries needed
+
+Images:
+  - Local image files
+  - No external image services
+
+==================================================
+              FILE PERMISSIONS
+==================================================
+
+Web Server:
+  - Read access to all HTML/CSS/JS files
+  - Execute access to PHP files
+  - Write access not required
+
+Database:
+  - Full access for configured user
+  - CREATE, READ, UPDATE, DELETE
+
+
+==================================================
+            SECURITY FEATURES
+==================================================
+
+Implemented:
+  ✓ Password hashing (PHP password_hash)
+  ✓ SQL injection prevention (prepared statements)
+  ✓ XSS protection (htmlspecialchars)
+  ✓ Input validation and sanitization
+  ✓ CORS headers for API security
+
+
+
+==================================================
+           INSTALLATION ORDER
+==================================================
+
+Step 1: Install XAMPP
+Step 2: Start Apache and MySQL
+Step 3: Create database in phpMyAdmin
+Step 4: Import database structure
+Step 5: Copy project files to htdocs
+Step 6: Configure config.php
+Step 7: Open in browser
+
+==================================================
+            TESTING REQUIREMENTS
+==================================================
+
+Functional Testing:
+  - User registration and login
+  - Event browsing and filtering
+  - Event registration process
+  - Budget calculator functionality
+  - Form validation
+
+Browser Testing:
+  - Desktop browsers
+  - Mobile responsive view
+  - Different screen sizes
+
+==================================================
+                 NO NEED FOR
+==================================================
+
+NOT Required:
+  ✗ Node.js
+  ✗ npm/yarn
+  ✗ React/Angular/Vue
+  ✗ Bootstrap/Tailwind
+  ✗ jQuery
+  ✗ Composer
+  ✗ Third-party APIs
+  ✗ Payment gateways
+  ✗ Email servers
+
+==================================================
+             MINIMUM KNOWLEDGE
+==================================================
+
+To Run the Project:
+  - Basic XAMPP usage
+  - How to start Apache/MySQL
+  - Browser navigation
+
+To Modify the Project:
+  - HTML/CSS basics
+  - JavaScript fundamentals
+  - PHP basics
+  - SQL queries
+  - Database management
+
+
+==================================================
+
+Last Updated: January 2026
+Created by: EventsX Development Team
+
+==================================================
