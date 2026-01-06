@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- === HEAD SECTION === -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Calculator - EventX</title>
+    <link rel="stylesheet" href="css/global.css">
+</head>
+<!-- === END HEAD === -->
+<body>
+    <!-- === HEADER SECTION === -->
+    <header>
+        <h1>EventsX</h1>
+        <p>Your Personal Event Planner in Egypt</p>
+    </header>
+    <!-- === END HEADER === -->
+    
+    <!-- === NAVIGATION SECTION === -->
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="registration.html">Register</a></li>
+            <li><a href="budget-calculator.html">Budget Calculator</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+    <!-- === END NAVIGATION === -->
+    
+    <!-- === BREADCRUMB SECTION === -->
+    <div class="breadcrumb">
+        <a href="../index.html">Home</a> &gt; <a href="budget-calculator.html">Budget Calculator</a>
+    </div>
+    <!-- === END BREADCRUMB === -->
+    
+    <!-- === MAIN CONTENT SECTION === -->
+    <main>
+        <h2>Event Budget Calculator</h2>
+        <form>
+            <label for="event-type">Event Type:</label>
+            <select id="event-type" name="event-type">
+                <option value="wedding">Wedding</option>
+                <option value="birthday">Birthday Party</option>
+                <option value="corporate">Corporate Event</option>
+                <option value="conference">Conference</option>
+            </select>
+            
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" name="guests" min="1" value="50">
+            
+            <fieldset>
+                <legend>Services Needed:</legend>
+                <label><input type="checkbox" name="services" value="catering"> Catering (300 EGP per person)</label>
+                <label><input type="checkbox" name="services" value="photography"> Photography (5000 EGP)</label>
+                <label><input type="checkbox" name="services" value="venue"> Venue Rental (10000 EGP)</label>
+                <label><input type="checkbox" name="services" value="decorations"> Decorations (7000 EGP)</label>
+                <label><input type="checkbox" name="services" value="entertainment"> Entertainment (15000 EGP)</label>
+            </fieldset>
+            
+            <button type="button" id="calculate">Calculate Budget</button>
+            
+            <div class="result">
+                <h3>Estimated Budget:</h3>
+                <p id="total-cost">0 EGP</p>
+                <p id="cost-breakdown"></p>
+            </div>
+        </form>
+    </main>
+    <!-- === END MAIN CONTENT === -->
+    
+    <!-- === FOOTER SECTION === -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+            <div class="footer-contact">
+                <a href="mailto:EventX@gmail.com">Email</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a>
+                <a href="https://twitter.com/" target="_blank" rel="noopener">Twitter</a>
+            </div>
+        </div>
+        <p>&copy; 2026 EventsX - All Rights Reserved</p>
+    </footer>
+    <!-- === END FOOTER === -->
+    <!-- === SCRIPTS SECTION === -->
+    <script src="Scripts/calculator.js"></script>
+    <script src="Scripts/app.js"></script>
+    <!-- === END SCRIPTS === -->
+</body>
+</html>
