@@ -1,0 +1,550 @@
+/*
+ID & Name: 221100268 & eslam nader nasralden  
+Course: CSE211 Web Programming 
+Assignment: Course Project
+date: 1/1/2026
+Description: Web programming final course project.
+*/
+
+/*
+ID & Name: 221100557 & mohamed ahmed morsy  
+Course: CSE211 Web Programming 
+Assignment: Course Project
+date: 1/1/2026
+Description: Web programming final course project.
+*/
+
+/*
+ID & Name: 222100363 & basel mohamed ahmed 
+Course: CSE211 Web Programming 
+Assignment: Course Project
+date: 1/1/2026
+Description: Web programming final course project.
+*/
+
+/*
+ID & Name: 222101945 & youssef khaled   
+Course: CSE211 Web Programming 
+Assignment: Course Project
+date: 1/1/2026
+Description: Web programming final course project.
+*/
+
+
+/* Base Styles */
+:root {
+  --primary: #0056b3;       /* Professional Deep Blue (Updated) */
+  --primary-light: #0381ff; /* Brighter Blue (Updated) */
+  --secondary: #e0e0e0;     /* Light Grey (Updated) */
+  --text: #333333;
+  --bg-light: #f8f9fa;      /* Clean Off-white (Updated) */
+  --bg-dark: #2c3e50;       /* Dark slate for text contrast */
+  --error: #e74c3c;
+}
+
+body {
+  font-family: "Source Sans Pro", "Segoe UI", Tahoma, Geneva, Verdana,
+    sans-serif;
+  line-height: 36px; /* Reverted to original spacing */
+  margin: 0;
+  padding: 0;
+  color: var(--text);
+  background-color: var(--bg-light);
+}
+
+/* ===== TYPOGRAPHY ===== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto Slab", "Georgia", serif;
+  color: var(--bg-dark); /* Updated color only */
+}
+
+h1 {
+  font-size: 18pt;
+  font-style: italic;
+  margin-bottom: 6pt;
+}
+
+h2 {
+  color: var(--primary); /* Updated color only */
+  font-size: 16pt;
+  margin-top: 0pt;
+  margin-bottom: 6pt;
+}
+
+p {
+  font-weight: bold;
+  margin-bottom: 6pt;
+  font-size: 1rem;
+}
+
+/* ===== LAYOUT ===== */
+
+header {
+  text-align: center;
+  font-size: 18pt;
+  margin-bottom: 24pt;
+  font-family: "Roboto Slab", serif;
+}
+
+header h1 {
+  font-size: 40px;
+  font-weight: bold;
+  color: white; /* Updated for better contrast */
+  background-color: var(--primary); /* Updated to Theme Blue */
+}
+
+section header {
+  font-family: "Verdana", Arial, sans-serif, serif;
+  font-size: 18pt;
+  font-variant: small-caps;
+  color: var(--text); /* Updated color */
+  border: none;
+  font-style: normal;
+  font-weight: normal;
+  display: inline; /* Reverted to inline as requested */
+  margin-bottom: 12pt;
+}
+
+section {
+  font-weight: bold;
+  margin-bottom: 6pt;
+}
+
+/* Parallax Effect */
+.parallax {
+  background-image: url("../images/events.jpg");
+  height: 400px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+nav {
+  background-color: var(--primary); /* Updated to Theme Blue */
+  padding: 1rem;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  display: block;
+  background-color: transparent;
+}
+
+nav a:hover {
+  background-color: var(--secondary); /* Updated color */
+  color: var(--primary); /* Updated color */
+}
+
+.breadcrumb {
+  padding: 0.5rem 1rem;
+  background-color: #ecf0f1;
+  font-size: 0.9rem;
+}
+
+.breadcrumb a {
+  color: var(--primary); /* Updated color */
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: fadeIn 0.5s ease-in;
+}
+
+footer {
+  background-color: var(--bg-dark); /* Updated color */
+  color: white;
+  text-align: left;
+  font-size: 10pt;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+footer p {
+  margin: 0;
+  font-size: 10pt;
+}
+
+footer a {
+  color: white;
+}
+
+/* ===== LINK STYLES ===== */
+a {
+  color: var(--primary); /* Updated: Readable Blue */
+  background-color: transparent; /* Updated: Removed dark background box */
+  text-decoration: none;
+}
+
+/* Hover behavior */
+a:hover {
+  color: var(--primary-light); /* Updated color */
+  text-decoration: underline;
+  background-color: transparent; /* Updated background */
+}
+
+/* ===== TWO-COLUMN LAYOUT ===== */
+.two-column {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.event-listings {
+  flex: 1;
+  min-width: 300px;
+}
+
+.search-filter {
+  flex: 0 0 300px;
+}
+
+img {
+  float: left;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===== EVENT CARDS ===== */
+.event-card {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 4px solid var(--primary); /* Added color accent only, no layout change */
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.event-content {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.event-image {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.event-details {
+  flex: 1;
+}
+
+/* ===== FORMS ===== */
+form {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: inherit;
+  box-sizing: border-box; /* Necessary fix to prevent width:100% from overflowing */
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary); /* Color update only */
+}
+
+button {
+  background-color: var(--primary); /* Updated color */
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--primary-light); /* Updated color */
+}
+
+/* ===== TABLES ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: var(--primary); /* Updated color */
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* ===== CONTACT PAGE ===== */
+.contact-info {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.social-links {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.social-links a {
+  color: var(--primary); /* Updated color */
+  text-decoration: none;
+  background-color: transparent; /* Ensure no bg */
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+  background-color: transparent; /* Ensure no bg */
+}
+
+.contact-form {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* GU University Link */
+.institution-link {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  border-left: 3px solid var(--primary); /* Color accent */
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  .two-column {
+    flex-direction: column;
+  }
+
+  .search-filter {
+    flex: 1;
+  }
+
+  .event-content {
+    flex-direction: column;
+  }
+
+  .event-image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.error-message {
+  color: var(--error);
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+.no-events {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+}
+
+.modal {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.user-dropdown {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  min-width: 150px;
+}
+
+.user-dropdown a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: var(--text);
+  text-decoration: none;
+  background: white;
+}
+
+.user-dropdown a:hover {
+  background-color: var(--bg-light);
+}
+
+#user-menu:hover .user-dropdown {
+  display: block;
+}
+
+/* Animation for modal */
+.modal-content {
+  animation: modalFadeIn 0.3s;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .user-dropdown {
+    position: static;
+    box-shadow: none;
+  }
+
+  #user-menu:hover .user-dropdown {
+    display: none;
+  }
+
+  #user-menu:focus-within .user-dropdown {
+    display: block;
+  }
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  nav,
+  .breadcrumb,
+  footer {
+    display: none;
+  }
+
+  body {
+    background-color: white;
+    color: black;
+    font-size: 12pt;
+  }
+
+  a::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    font-weight: normal;
+  }
+}
